@@ -22,7 +22,7 @@ public class SesEmailSender implements EmailSenderGateway {
     @Override
     public void sendEmail(String toEmail, String subject, String body) {
         SendEmailRequest request = new SendEmailRequest()
-                .withSource("gabriel.afg181@gmail.com")
+                .withSource("SeuEmailAws@gmail.com")
                 .withDestination(new Destination().withToAddresses(toEmail))
                 .withMessage(new Message()
                         .withSubject(new Content(subject))
