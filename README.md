@@ -1,19 +1,62 @@
-## Email Microservice
+# Email Microservice
+## Uber Backend Challenge
 
-**Se Trata de um microserviço desenvolvido em Java com o framework Spring Boot, com o objetivo de enviar email. Utilizando de fundo o AWS SES (Amazon Simple Email Service)**
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
+[![Licence](https://img.shields.io/github/license/Ileriayo/markdown-badges?style=for-the-badge)](./LICENSE)
 
-# 📁 Acesso ao projeto
+This project is an API built using **Java, Java Spring, AWS Simple Email Service.**
 
-**Para baixar o projeto clique <a href="https://github.com/gabriel-afg/EmailMicroservice/archive/refs/heads/main.zip">aqui</a>.**
+The Microservice was developed to demonstrate how to solve the [Uber Backend Challenge](https://github.com/uber-archive/coding-challenge-tools/blob/master/coding_challenge.md).
 
-## Documentação da api
+## Table of Contents
 
-```http
-  POST /api/email/send
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Usage](#usage)
+- [API Endpoints](#api-endpoints)
+- [Database](#database)
+- [Contributing](#contributing)
+
+## Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/gabriel-afg/EmailMicroservice.git
 ```
 
-| Parâmetro   | Tipo       |
-| :---------- | :--------- | 
-| `to`      | `String` | 
-| `subject`      | `String` |  
-| `body`      | `String` | 
+2. Install dependencies with Maven
+
+3. Update `application.properties` puting your AWS Credentials
+
+```yaml
+aws.region=us-east-1
+aws.accessKeyId=YOUR_ACESS_KEY
+aws.secretKey=YOUR_SECRET_KEY
+```
+## Usage
+
+1. Start the application with Maven
+2. The API will be accessible at http://localhost:8080
+
+## API Endpoints
+The API provides the following endpoints:
+
+**GET EMAIL**
+```markdown
+POST /api/email/send - Send a e-mail from your sender to the destination
+```
+
+**BODY**
+```json
+{
+  "to": "gabriel@gmail.com",
+  "subject": "teste",
+  "body": "teste"
+}
+```
+
+## Contributing
+
+Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request to the repository.
